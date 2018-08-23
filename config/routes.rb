@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   # patch '/games/:id', to: 'games#update'
 
   resources :games, only: [:create, :update, :show, :index]
+  get '/games/index', to: 'games#index'
+  post '/games', to: 'games#create'
+  get '/games/:id', to: 'games#show'
+  patch '/games/:id', to: 'games#update'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
